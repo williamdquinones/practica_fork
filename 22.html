@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 22</title>
+	<script type="text/javascript">
+		function cuantoFalta(){
+			var dia = document.getElementById('dia').value;
+			var mes = document.getElementById('mes').value;
+			var anio = document.getElementById('anio').value;
+				
+			dia = parseInt(dia);
+			mes = parseInt(mes-1);
+			anio = parseInt(anio);
+				var fecha = new Date();
+				fecha.setDate(dia);
+				fecha.setMonth(mes);
+				fecha.setFullYear(anio);
+				var actual = new Date();
+				var dia_completo = 24 * 60 * 60 * 1000; 
+				alert (dia_completo);
+				fecha = parseInt(fecha.getTime()/dia_completo);
+				actual = parseInt(actual.getTime()/dia_completo);
+				alert (fecha);
+				alert (actual);
+				var dias_faltan = fecha - actual;
+				dias_faltan = parseInt(dias_faltan)
+				alert (dias_faltan);
+		}
+	</script>
+</head>
+<body>
+	<h1>Número de días que faltan hasta...</h1>
+	Día: <input type="text" id="dia"><br>
+	Mes: <input type="text" id="mes"><br>
+	Año: <input type="text" id="anio"><br>
+	<button onclick="cuantoFalta()">Calcular</button>
+</body>
+</html>

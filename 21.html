@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ejercicio 21</title>
+	<script type="text/javascript">
+		var fecha = new Date();
+		var dias = new Array("Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado");
+		var meses = new Array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
+
+		document.write ("La fecha de hoy es " + fecha.toLocaleDateString()+"<br>");
+
+		document.write ("La hora exacta es " + fecha.toLocaleTimeString()+"<br>");
+
+		document.write ("Hoy es un <b>" + dias[fecha.getDay()] + " </b>estupendo del mes de <b>" + meses[fecha.getMonth()]+"</b><br>");
+
+		fecha.setMonth(fecha.getMonth()-2);
+		document.write ("Hace 2 meses era " + dias[fecha.getDay()] + " " + fecha.getDate() + " de " + meses[fecha.getMonth()]+"<br>");
+
+		fecha.setMonth(fecha.getMonth()+2);
+		fecha.setDate(fecha.getDate()+15);
+		document.write ("Dentro de 15 dias será: " + dias[fecha.getDay()] + " " +fecha.getDate() + " de " + meses[fecha.getMonth()]);
+	</script>
+</head>
+<body>
+
+</body>
+</html>
